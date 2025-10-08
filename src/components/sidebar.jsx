@@ -1,5 +1,5 @@
-import { NavigationItem } from "./NavigationItem";
-import { SocialLinks } from "./SocialLinks";
+import { NavigationItem } from "./";
+import { SocialLinks } from "./socialLinks";
 import { useNavigation } from "../hooks/useNavigation";
 import { User } from "lucide-react";
 

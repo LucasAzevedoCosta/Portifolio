@@ -1,8 +1,9 @@
-import { Sidebar } from "./components/Sidebar";
-import { HeroSection } from "./components/HeroSection";
-import { AboutSection } from "./components/AboutSection";
-import { AppProvider, useAppContext } from "./context/AppContext";
+import { Sidebar } from "./components/sidebar";
+import { HeroSection } from "./components/heroSection";
+import { AboutSection } from "./components/aboutSection";
+import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
+import { ThemeProvider } from "./context/themeContext"
 
 function AppContent() {
   const { activeSection } = useAppContext();
@@ -22,9 +23,11 @@ function AppContent() {
 
 export default function App() {
   return (
-    <AppProvider>
-      <AppContent />
-    </AppProvider>
+    <ThemeProvider>
+      <AppProvider>
+        <AppContent />
+      </AppProvider>
+    </ThemeProvider>
   );
 }
 
