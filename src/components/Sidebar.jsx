@@ -1,25 +1,10 @@
-import {
-  Home,
-  User,
-  Briefcase,
-  FileText,
-  FolderOpen,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
 import { NavigationItem } from "./NavigationItem";
 import { SocialLinks } from "./SocialLinks";
+import { useNavigation } from "../hooks/useNavigation";
+import { User } from "lucide-react";
 
 export function Sidebar({ activeSection = "inicio", onNavigate }) {
-  const navigationItems = [
-    { id: "inicio", label: "Início", icon: Home },
-    { id: "sobre", label: "Sobre mim", icon: User },
-    { id: "oque-faco", label: "O que eu faço", icon: Briefcase },
-    { id: "resumo", label: "Resumo", icon: FileText },
-    { id: "portfolio", label: "Portfolio", icon: FolderOpen },
-    { id: "depoimentos", label: "Depoimentos", icon: MessageCircle },
-    { id: "contato", label: "Contato", icon: Mail },
-  ];
+  const navigationItems = useNavigation();
 
   return (
     <aside className="w-64 h-screen fixed top-0 left-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white flex flex-col z-50">
