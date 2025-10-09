@@ -1,10 +1,10 @@
-import { NavigationItem } from "./";
+import { NavigationItem } from "./navigationItem";
 import { SocialLinks } from "./socialLinks";
-import { useNavigation } from "../hooks/useNavigation";
+import { UseNavigation } from "../hooks/useNavigation";
 import { User } from "lucide-react";
 
 export function Sidebar({ activeSection = "inicio", onNavigate }) {
-  const navigationItems = useNavigation();
+  const navigationItems = UseNavigation();
 
   return (
     <aside className="w-64 h-screen fixed top-0 left-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white flex flex-col z-50">

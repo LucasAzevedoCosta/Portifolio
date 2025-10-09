@@ -1,6 +1,6 @@
 import { Home, User, Briefcase, FileText, FolderOpen, Mail, MessageCircle } from "lucide-react";
 
-export function useNavigation() {
+export function UseNavigation() {
   return [
     { id: "inicio", label: "Início", icon: Home },
     { id: "sobre", label: "Sobre mim", icon: User },

@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { useActiveSection } from "../hooks/useActiveSection";
+import { UseActiveSection } from "../hooks/useActiveSection";
 
 const AppContext = createContext();
 
@@ -14,7 +14,7 @@ export function AppProvider({ children }) {
     "contato",
   ];
 
-  const activeSection = useActiveSection(sectionIds);
+  const activeSection = UseActiveSection(sectionIds);
 
   return (
     <AppContext.Provider value={{ activeSection }}>

@@ -22,7 +22,7 @@ export function HeroSection() {
             Conheça meu trabalho
           </button>
           <button
-            onClick={() => scrollToSection("contato")}
+            onClick={() => ScrollToSection("contato")}
             className="bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
           >
             Entre em contato
