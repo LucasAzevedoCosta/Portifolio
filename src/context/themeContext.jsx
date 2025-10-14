@@ -1,24 +1,38 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { themes } from "../utils/themes";
 
-const ThemeContext = createContext();
+const themeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [themeName, setThemeName] = useState(
+    localStorage.getItem("themeName") || "ocean"
+  );
+  const [mode, setMode] = useState(
+    localStorage.getItem("themeMode") || "light"
+  );
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    const themeVars = themes[themeName][mode];
+    const root = document.documentElement;
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+    Object.entries(themeVars).forEach(([key, value]) => {
+      root.style.setProperty(key, value);
+    });
+
+    root.setAttribute("data-theme", `${themeName}-${mode}`);
+    localStorage.setItem("themeName", themeName);
+    localStorage.setItem("themeMode", mode);
+  }, [themeName, mode]);
+
+  const toggleMode = () =>
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
+  const changeTheme = (name) => setThemeName(name);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <themeContext.Provider value={{ themeName, mode, toggleMode, changeTheme }}>
       {children}
-    </ThemeContext.Provider>
+    </themeContext.Provider>
   );
 }
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => useContext(themeContext);

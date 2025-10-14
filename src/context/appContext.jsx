@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 import { UseActiveSection } from "../hooks/useActiveSection";
 
-const AppContext = createContext();
+const appContext = createContext();
 
 export function AppProvider({ children }) {
   const sectionIds = [
@@ -17,10 +17,10 @@ export function AppProvider({ children }) {
   const activeSection = UseActiveSection(sectionIds);
 
   return (
-    <AppContext.Provider value={{ activeSection }}>
+    <appContext.Provider value={{ activeSection }}>
       {children}
-    </AppContext.Provider>
+    </appContext.Provider>
   );
 }
 
-export const useAppContext = () => useContext(AppContext);
+export const useAppContext = () => useContext(appContext);

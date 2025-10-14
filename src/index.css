@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    --text 0.5s ease,
+    --background 0.5s ease,
+    --primary 0.5s ease,
+    --secondary 0.5s ease,
+    --accent 0.5s ease;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}

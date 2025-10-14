@@ -2,6 +2,7 @@ import { NavigationItem } from "./navigationItem";
 import { SocialLinks } from "./socialLinks";
 import { UseNavigation } from "../hooks/useNavigation";
 import { User } from "lucide-react";
+import { ThemeSwitcher } from "./themeSwitcher";
 
 export function Sidebar({ activeSection = "inicio", onNavigate }) {
   const navigationItems = UseNavigation();
@@ -31,6 +32,7 @@ export function Sidebar({ activeSection = "inicio", onNavigate }) {
             />
           ))}
         </ul>
+        <ThemeSwitcher/>
       </nav>
 
       <div className="px-6 pb-6">
