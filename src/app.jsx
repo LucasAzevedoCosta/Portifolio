@@ -4,6 +4,7 @@ import { AboutSection } from "./components/aboutSection";
 import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
 import { ThemeProvider } from "./context/themeContext"
+import { PortfolioSection } from "./components/portfolioSection";
 
 function AppContent() {
   const { activeSection } = useAppContext();
@@ -15,6 +16,7 @@ function AppContent() {
         <div className="px-8">
           <HeroSection />
           <AboutSection />
+          <PortfolioSection />
         </div>
       </main>
     </div>
