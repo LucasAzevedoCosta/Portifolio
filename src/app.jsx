@@ -5,6 +5,8 @@ import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
 import { ThemeProvider } from "./context/themeContext"
 import { PortfolioSection } from "./components/portfolioSection";
+import { SkillsSection } from "./components/skillsSection";
+import { CertificatesSection } from "./components/certificatesSection";
 
 function AppContent() {
   const { activeSection } = useAppContext();
@@ -16,6 +18,8 @@ function AppContent() {
         <div className="px-8">
           <HeroSection />
           <AboutSection />
+          <SkillsSection />
+          <CertificatesSection />
           <PortfolioSection />
         </div>
       </main>
