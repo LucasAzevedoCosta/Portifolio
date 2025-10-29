@@ -7,11 +7,10 @@ export function AppProvider({ children }) {
   const sectionIds = [
     "inicio",
     "sobre",
-    "oque-faco",
+    "skills",
+    "certificados",
     "resumo",
     "portfolio",
-    "depoimentos",
-    "contato",
   ];
 
   const activeSection = UseActiveSection(sectionIds);

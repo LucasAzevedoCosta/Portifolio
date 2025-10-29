@@ -12,7 +12,7 @@ export function SkillsSection() {
       : skills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section id="oque-faco" className="min-h-screen flex items-center py-20">
+    <section id="skills" className="min-h-screen flex items-center py-20">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-12">
           <p className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-2">
