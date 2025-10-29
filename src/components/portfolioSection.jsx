@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
-import { projects } from '../utils/projects'
+import { projects } from '../utils/lists/projects'
 
 export function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);
