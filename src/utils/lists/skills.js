@@ -1,4 +1,5 @@
-import { DiJava, DiMsqlServer } from "react-icons/di";
+import { DiMsqlServer } from "react-icons/di";
+import { FaJava } from "react-icons/fa";
 import {
   SiDocker,
   SiGit,
@@ -17,13 +18,15 @@ export const skills = [
     category: "backend",
     level: 95,
     experience: "5+ anos",
-    icon: DiJava,
+    projects: 12,
+    icon: FaJava,
   },
   {
     name: "Spring Boot",
     category: "backend",
     level: 90,
     experience: "4+ anos",
+    projects: 10,
     icon: SiSpringboot,
   },
   {
@@ -31,6 +34,7 @@ export const skills = [
     category: "backend",
     level: 85,
     experience: "4+ anos",
+    projects: 8,
     icon: SiHibernate,
   },
   {
@@ -38,6 +42,7 @@ export const skills = [
     category: "backend",
     level: 95,
     experience: "5+ anos",
+    projects: 15,
     icon: SiSwagger,
   },
 
@@ -46,6 +51,7 @@ export const skills = [
     category: "database",
     level: 90,
     experience: "4+ anos",
+    projects: 9,
     icon: SiPostgresql,
   },
   {
@@ -53,6 +59,7 @@ export const skills = [
     category: "database",
     level: 88,
     experience: "4+ anos",
+    projects: 6,
     icon: DiMsqlServer,
   },
   {
@@ -60,6 +67,7 @@ export const skills = [
     category: "database",
     level: 80,
     experience: "3+ anos",
+    projects: 5,
     icon: SiOracle,
   },
 
@@ -68,6 +76,7 @@ export const skills = [
     category: "devops",
     level: 85,
     experience: "3+ anos",
+    projects: 7,
     icon: SiDocker,
   },
   {
@@ -75,6 +84,7 @@ export const skills = [
     category: "devops",
     level: 90,
     experience: "5+ anos",
+    projects: 20,
     icon: SiGit,
   },
   {
@@ -82,6 +92,7 @@ export const skills = [
     category: "devops",
     level: 82,
     experience: "2+ anos",
+    projects: 4,
     icon: SiSonarqube,
   },
 
@@ -90,6 +101,7 @@ export const skills = [
     category: "frontend",
     level: 75,
     experience: "2+ anos",
+    projects: 5,
     icon: SiReact,
   },
 ];

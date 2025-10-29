@@ -66,9 +66,13 @@ export function SkillsSection() {
                       <h3 className="text-xl font-bold text-white">
                         {skill.name}
                       </h3>
-                      <span className="text-sm text-cyan-400">
-                        {skill.experience}
-                      </span>
+                      <div className="text-sm text-cyan-400 flex flex-col">
+                        <span>{skill.experience}</span>
+                        <span className="text-sm text-cyan-400">
+                          {skill.projects}{" "}
+                          {skill.projects === 1 ? "projeto" : "projetos"}
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <div className="text-right">
