@@ -25,30 +25,23 @@ export function AboutSection() {
   ];
 
   return (
-    <section
-      id="sobre"
-      className="min-h-screen flex items-center py-20 bg-background text-text transition-colors duration-500"
-    >
-      <div className="max-w-6xl mx-auto w-full px-6 md:px-8">
-        {/* Cabeçalho */}
+    <section id="sobre" className="min-h-screen flex items-center py-20">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-primary mb-4 transition-colors duration-500">
-            Sobre Mim
-          </h2>
-          <p className="text-secondary text-lg transition-colors duration-500">
+          <h2 className="text-5xl font-bold text-cyan-400 mb-4">Sobre Mim</h2>
+          <p className="text-slate-400 text-lg">
             Desenvolvedor back-end apaixonado por tecnologia e inovação
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Coluna esquerda */}
           <div className="space-y-6">
-            <div className="rounded-2xl p-8 border border-accent bg-[color:var(--background)]/70 shadow-lg shadow-[color:var(--accent)]/10 backdrop-blur-sm transition-all duration-500">
-              <h3 className="text-2xl font-bold text-primary mb-6">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Minha Trajetória
               </h3>
 
-              <div className="space-y-4 text-text/90">
+              <div className="space-y-4 text-slate-300">
                 <p>
                   Sou graduado em Análise e Desenvolvimento de Sistemas e atuo
                   como desenvolvedor back-end com foco em Java 8+, criando e
@@ -71,18 +64,17 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Coluna direita */}
           <div className="grid grid-cols-2 gap-6">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="rounded-2xl p-6 border border-accent bg-[color:var(--background)]/60 hover:bg-[color:var(--primary)]/10 hover:border-primary hover:shadow-[0_0_20px_var(--primary)]/20 hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105"
               >
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <skill.icon className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4">
+                  <skill.icon className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h4 className="text-primary font-bold mb-2">{skill.title}</h4>
-                <p className="text-text/80 text-sm">{skill.description}</p>
+                <h4 className="text-white font-bold mb-2">{skill.title}</h4>
+                <p className="text-slate-400 text-sm">{skill.description}</p>
               </div>
             ))}
           </div>

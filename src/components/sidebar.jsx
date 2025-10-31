@@ -32,7 +32,7 @@ export function Sidebar({ activeSection = "inicio", onNavigate }) {
             />
           ))}
         </ul>
-        <ThemeSwitcher/>
+        {/* <ThemeSwitcher/> */}
       </nav>
 
       <div className="px-6 pb-6">
