@@ -12,7 +12,7 @@ export function Sidebar({ activeSection = "inicio", onNavigate }) {
       <div className="flex flex-col items-center pt-12 pb-8 px-6">
         <div className="w-32 h-32 rounded-full bg-gradient-to-br from-slate-700 to-slate-600 border-4 border-cyan-400 shadow-lg shadow-cyan-400/30 overflow-hidden mb-4">
           <div className="w-full h-full flex items-center justify-center">
-            <User className="w-16 h-16 text-slate-300" />
+            <img src="https://github.com/lucasazevedocosta.png" alt="" />
           </div>
         </div>
 
