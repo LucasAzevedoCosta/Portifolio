@@ -1,3 +1,6 @@
+import { FaJava } from "react-icons/fa";
+import { SiPostgresql, SiSpringboot, SiSwagger } from "react-icons/si";
+
 export const experiences = [
     {
       position: 'Senior Java Developer',
@@ -7,7 +10,7 @@ export const experiences = [
       location: 'São Paulo, SP',
       type: 'Full-time',
       description: 'Responsável pelo desenvolvimento e manutenção de aplicações enterprise em Java. Implementação de microserviços com Spring Boot, REST APIs, integração com bancos de dados PostgreSQL e Oracle. Arquitetura de soluções escaláveis.',
-      technologies: ['Java', 'Spring Boot', 'REST API', 'PostgreSQL', 'Docker', 'Hibernate'],
+      technologies: [FaJava, SiSpringboot, SiPostgresql, SiSwagger],
       highlights: [
         'Arquitetura e implementação de 5+ microserviços',
         'Redução de latência em 40% através de otimização de queries',
@@ -22,7 +25,7 @@ export const experiences = [
       location: 'Rio de Janeiro, RJ',
       type: 'Full-time',
       description: 'Desenvolvimento de APIs REST utilizando Java e Spring Framework. Integração com diversos bancos de dados e serviços externos. Implementação de testes unitários e integração contínua.',
-      technologies: ['Java', 'Spring Framework', 'REST API', 'SQL Server', 'JUnit', 'Maven'],
+      technologies: [FaJava, SiSpringboot, SiPostgresql, SiSwagger],
       highlights: [
         'Desenvolvimento de 15+ APIs em produção',
         'Implementação de CI/CD com Jenkins',
@@ -37,7 +40,7 @@ export const experiences = [
       location: 'Belo Horizonte, MG',
       type: 'Full-time',
       description: 'Desenvolvimento full-stack com Java no backend e React no frontend. Trabalho em equipe ágil com metodologia Scrum. Participação em todo ciclo de desenvolvimento.',
-      technologies: ['Java', 'React', 'JavaScript', 'PostgreSQL', 'Git', 'Agile'],
+      technologies: [FaJava, SiSpringboot, SiPostgresql, SiSwagger],
       highlights: [
         'Entrega de 3 projetos completos',
         'Aprendizado rápido de novas tecnologias',

@@ -1,11 +1,17 @@
-import { useState } from 'react';
-import { X, ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
-import { projects } from '../utils/lists/projects'
+import { useState } from "react";
+import {
+  X,
+  ExternalLink,
+  Github,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { projects } from "../utils/lists/projects";
+import { categoryColors } from "../utils/lists/categoryColors";
 
 export function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -37,7 +43,9 @@ export function PortfolioSection() {
     <section id="portfolio" className="min-h-screen flex items-center py-20">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-cyan-400 mb-4">Meu Trabalho</h2>
+          <h2 className="text-5xl font-bold text-cyan-400 mb-4">
+            Meu Trabalho
+          </h2>
           <p className="text-slate-400 text-lg">
             Uma coleção de projetos nos quais trabalhei
           </p>
@@ -58,8 +66,12 @@ export function PortfolioSection() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-slate-400 text-sm mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-slate-400 text-sm mb-4">
+                  {project.description}
+                </p>
                 <div className="flex gap-2">
                   <span className="inline-block w-3 h-3 bg-cyan-500 rounded-full"></span>
                   <span className="inline-block w-3 h-3 bg-slate-600 rounded-full"></span>
@@ -74,7 +86,9 @@ export function PortfolioSection() {
           <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-700 shadow-2xl">
               <div className="sticky top-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 p-4 flex justify-between items-center z-10">
-                <h3 className="text-2xl font-bold text-white">{selectedProject.title}</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  {selectedProject.title}
+                </h3>
                 <button
                   onClick={closeModal}
                   className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-700 rounded-lg"
@@ -89,7 +103,9 @@ export function PortfolioSection() {
                     <div className="aspect-video bg-slate-700 rounded-xl overflow-hidden">
                       <img
                         src={selectedProject.details.images[currentImageIndex]}
-                        alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                        alt={`${selectedProject.title} - Image ${
+                          currentImageIndex + 1
+                        }`}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -115,8 +131,8 @@ export function PortfolioSection() {
                               onClick={() => setCurrentImageIndex(index)}
                               className={`w-2 h-2 rounded-full transition-all ${
                                 index === currentImageIndex
-                                  ? 'bg-cyan-400 w-8'
-                                  : 'bg-slate-600'
+                                  ? "bg-cyan-400 w-8"
+                                  : "bg-slate-600"
                               }`}
                             />
                           ))}
@@ -127,32 +143,63 @@ export function PortfolioSection() {
 
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Informação do projeto:</h4>
+                      <h4 className="text-cyan-400 font-semibold mb-2">
+                        Informação do projeto:
+                      </h4>
                       <p className="text-slate-300 text-sm leading-relaxed">
                         {selectedProject.details.info}
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Detalhes do projeto:</h4>
+                      <h4 className="text-cyan-400 font-semibold mb-2">
+                        Detalhes do projeto:
+                      </h4>
                       <div className="space-y-2">
                         <div>
-                          <span className="text-slate-500 text-sm">Tecnologias:</span>
-                          <p className="text-slate-300 text-sm">{selectedProject.details.technologies}</p>
+                          <span className="text-slate-500 text-sm">
+                            Tecnologias:
+                          </span>
+                          <div className="flex flex-wrap items-center space-x-4">
+                            {/* Mapear e renderizar os ícones */}
+                            {selectedProject.details.technologies.map(
+                              (tech, index) => {
+                                const { icon: Icon, category } = tech;
+                                const colors =
+                                  categoryColors[category] ||
+                                  categoryColors.default;
+
+                                return (
+                                  <div
+                                    key={index}
+                                    className={`w-10 h-10 ${colors.bgColor} rounded-xl flex items-center justify-center shadow-lg`}
+                                  >
+                                    <Icon className="w-6 h-6 text-white" />
+                                  </div>
+                                );
+                              }
+                            )}
+                          </div>
                         </div>
                         <div>
                           <span className="text-slate-500 text-sm">Data:</span>
-                          <p className="text-slate-300 text-sm">{selectedProject.details.date}</p>
+                          <p className="text-slate-300 text-sm">
+                            {selectedProject.details.date}
+                          </p>
                         </div>
                         <div>
                           <span className="text-slate-500 text-sm">URL:</span>
-                          <p className="text-cyan-400 text-sm">{selectedProject.details.url}</p>
+                          <p className="text-cyan-400 text-sm">
+                            {selectedProject.details.url}
+                          </p>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-3">Share:</h4>
+                      <h4 className="text-cyan-400 font-semibold mb-3">
+                        Share:
+                      </h4>
                       <div className="flex gap-3">
                         <a
                           href={selectedProject.details.url}

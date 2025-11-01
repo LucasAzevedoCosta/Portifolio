@@ -3,7 +3,6 @@ import {
   Calendar,
   MapPin,
   Mail,
-  Globe,
   Github,
   Download,
 } from "lucide-react";
@@ -31,7 +30,11 @@ export function ExperienceSection() {
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 sticky top-24">
               <div className="mb-8">
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
-                  <img src="https://github.com/lucasazevedocosta.png" alt="" className="w-20 h-20 rounded-2xl" />
+                  <img
+                    src="https://github.com/lucasazevedocosta.png"
+                    alt=""
+                    className="w-20 h-20 rounded-2xl"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {personalInfo.name}
@@ -152,13 +155,13 @@ export function ExperienceSection() {
                   <div className="mb-4">
                     <p className="text-sm text-slate-500 mb-2">Tecnologias:</p>
                     <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, idx) => (
-                        <span
+                      {exp.technologies.map((TechIcon, idx) => (
+                        <div
                           key={idx}
-                          className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold px-3 py-1 rounded-full"
+                          className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold px-3 py-1 rounded-2xl flex items-center justify-center"
                         >
-                          {tech}
-                        </span>
+                          <TechIcon className="w-5 h-5 mr-1 text-cyan-400" />
+                        </div>
                       ))}
                     </div>
                   </div>
