@@ -5,6 +5,7 @@ import {
   Github,
   ChevronLeft,
   ChevronRight,
+  Globe,
 } from "lucide-react";
 import { projects } from "../utils/lists/projects";
 import { categoryColors } from "../utils/lists/categoryColors";
@@ -50,7 +51,6 @@ export function PortfolioSection() {
             Uma coleção de projetos nos quais trabalhei
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
@@ -65,17 +65,59 @@ export function PortfolioSection() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-slate-400 text-sm mb-4">
-                  {project.description}
-                </p>
-                <div className="flex gap-2">
-                  <span className="inline-block w-3 h-3 bg-cyan-500 rounded-full"></span>
-                  <span className="inline-block w-3 h-3 bg-slate-600 rounded-full"></span>
-                  <span className="inline-block w-3 h-3 bg-slate-600 rounded-full"></span>
+              <div className="p-6 space-y-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm">
+                    {project.description}
+                  </p>
+                </div>
+                <div>
+                  <span className="text-slate-500 text-sm">Tecnologias:</span>
+                  <div className="flex flex-wrap gap-3">
+                    {project.details.technologies.map((tech, index) => {
+                      const { icon: Icon, category } = tech;
+                      const colors =
+                        categoryColors[category] || categoryColors.default;
+
+                      return (
+                        <div
+                          key={index}
+                          className={`w-7 h-7 ${colors.bgColor} rounded-lg flex items-center justify-center shadow-md`}
+                        >
+                          <Icon className="w-5 h-5 text-white" />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="flex gap-3 pt-2">
+                  {project.details.url && (
+                    <a
+                      href={project.details.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-7 h-7 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                    >
+                      <Globe className="w-5 h-5 text-white" />
+                    </a>
+                  )}
+
+                  {project.details.github && (
+                    <a
+                      href={project.details.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-7 h-7 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                    >
+                      <Github className="w-5 h-5 text-white" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -161,7 +203,6 @@ export function PortfolioSection() {
                             Tecnologias:
                           </span>
                           <div className="flex flex-wrap items-center space-x-4">
-                            {/* Mapear e renderizar os ícones */}
                             {selectedProject.details.technologies.map(
                               (tech, index) => {
                                 const { icon: Icon, category } = tech;
@@ -210,7 +251,7 @@ export function PortfolioSection() {
                           <ExternalLink className="w-5 h-5 text-white" />
                         </a>
                         <a
-                          href="#"
+                          href={selectedProject.details.github}
                           className="w-10 h-10 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
                         >
                           <Github className="w-5 h-5 text-white" />
