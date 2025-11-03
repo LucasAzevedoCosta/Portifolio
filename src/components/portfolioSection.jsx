@@ -13,6 +13,7 @@ import { categoryColors } from "../utils/lists/categoryColors";
 export function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [cardImageIndices, setCardImageIndices] = useState({}); // controla imagem atual de cada card
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -40,6 +41,33 @@ export function PortfolioSection() {
     }
   };
 
+  const nextCardImage = (e, projectId, totalImages) => {
+    e.stopPropagation();
+    setCardImageIndices((prev) => ({
+      ...prev,
+      [projectId]: (prev[projectId] + 1 || 1) % totalImages,
+    }));
+  };
+
+  const prevCardImage = (e, projectId, totalImages) => {
+    e.stopPropagation();
+    setCardImageIndices((prev) => ({
+      ...prev,
+      [projectId]:
+        prev[projectId] === 0 || prev[projectId] === undefined
+          ? totalImages - 1
+          : prev[projectId] - 1,
+    }));
+  };
+
+  const selectCardImage = (e, projectId, index) => {
+    e.stopPropagation();
+    setCardImageIndices((prev) => ({
+      ...prev,
+      [projectId]: index,
+    }));
+  };
+
   return (
     <section id="portfolio" className="min-h-screen flex items-center py-20">
       <div className="max-w-6xl mx-auto w-full">
@@ -51,77 +79,122 @@ export function PortfolioSection() {
             Uma coleção de projetos nos quais trabalhei
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              onClick={() => openModal(project)}
-              className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20"
-            >
-              <div className="aspect-video overflow-hidden bg-slate-700">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6 space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 text-sm">
-                    {project.description}
-                  </p>
-                </div>
-                <div>
-                  <span className="text-slate-500 text-sm">Tecnologias:</span>
-                  <div className="flex flex-wrap gap-3">
-                    {project.details.technologies.map((tech, index) => {
-                      const { icon: Icon, category } = tech;
-                      const colors =
-                        categoryColors[category] || categoryColors.default;
 
-                      return (
-                        <div
-                          key={index}
-                          className={`w-7 h-7 ${colors.bgColor} rounded-lg flex items-center justify-center shadow-md`}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => {
+            const currentCardIndex = cardImageIndices[project.id] || 0;
+            const totalImages = project.details.images.length;
+
+            return (
+              <div
+                key={project.id}
+                onClick={() => openModal(project)}
+                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20"
+              >
+                <div className="relative aspect-video overflow-hidden bg-slate-700">
+                  <img
+                    src={project.details.images[currentCardIndex]}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+
+                  {totalImages > 1 && (
+                    <>
+                      <button
+                        onClick={(e) =>
+                          prevCardImage(e, project.id, totalImages)
+                        }
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/70 hover:bg-slate-800 text-white p-1 rounded-md transition-colors"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={(e) =>
+                          nextCardImage(e, project.id, totalImages)
+                        }
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/70 hover:bg-slate-800 text-white p-1 rounded-md transition-colors"
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+
+                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                        {project.details.images.map((_, i) => (
+                          <button
+                            key={i}
+                            onClick={(e) => selectCardImage(e, project.id, i)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              i === currentCardIndex
+                                ? "bg-cyan-400 w-4"
+                                : "bg-slate-500"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                <div className="p-6 space-y-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-slate-400 text-sm">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div>
+                    <span className="text-slate-500 text-sm">Tecnologias:</span>
+                    <div className="flex flex-wrap gap-3">
+                      {project.details.technologies.map((tech, index) => {
+                        const { icon: Icon, category } = tech;
+                        const colors =
+                          categoryColors[category] || categoryColors.default;
+
+                        return (
+                          <div
+                            key={index}
+                            className={`w-7 h-7 ${colors.bgColor} rounded-lg flex items-center justify-center shadow-md`}
+                          >
+                            <Icon className="w-5 h-5 text-white" />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-slate-500 text-sm">Links:</span>
+                    <div className="flex gap-3 pt-2">
+                      {project.details.url && (
+                        <a
+                          href={project.details.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="w-7 h-7 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
                         >
-                          <Icon className="w-5 h-5 text-white" />
-                        </div>
-                      );
-                    })}
+                          <Globe className="w-5 h-5 text-white" />
+                        </a>
+                      )}
+
+                      {project.details.github && (
+                        <a
+                          href={project.details.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="w-7 h-7 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                        >
+                          <Github className="w-5 h-5 text-white" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-
-                <div className="flex gap-3 pt-2">
-                  {project.details.url && (
-                    <a
-                      href={project.details.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="w-7 h-7 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
-                    >
-                      <Globe className="w-5 h-5 text-white" />
-                    </a>
-                  )}
-
-                  {project.details.github && (
-                    <a
-                      href={project.details.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="w-7 h-7 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
-                    >
-                      <Github className="w-5 h-5 text-white" />
-                    </a>
-                  )}
-                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {selectedProject && (
@@ -141,6 +214,7 @@ export function PortfolioSection() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-8">
+                  {/* Imagem e controles */}
                   <div className="relative">
                     <div className="aspect-video bg-slate-700 rounded-xl overflow-hidden">
                       <img
@@ -183,6 +257,7 @@ export function PortfolioSection() {
                     )}
                   </div>
 
+                  {/* Detalhes do projeto */}
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">
