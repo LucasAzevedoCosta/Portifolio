@@ -1,10 +1,20 @@
-import { Briefcase, CheckCircle, ArrowRight } from "lucide-react";
+import { Briefcase, CheckCircle, ArrowRight, Download } from "lucide-react";
 
 export function HeroSection() {
+  const codeSnippet = `class Arthur:
+    def __init__(self):
+        self.name = "Lucas Cabral"
+        self.skills = [
+            "Python", "Java", "HTML",
+            "React", "JavaScript", "CSS"
+            "C", "SQL", "MongoDB"
+        ]
+
+    # Sempre aprendendo...`;
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden py-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden py-20 px-4"
     >
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 right-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
@@ -14,13 +24,6 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full px-4 py-2 w-fit">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              <span className="text-sm text-slate-300">
-                Disponível para projetos
-              </span>
-            </div>
-
             <div>
               <p className="text-lg text-slate-400 mb-3">Olá, sou</p>
               <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
@@ -64,7 +67,7 @@ export function HeroSection() {
               <button
                 onClick={() =>
                   document
-                    .getElementById("depoimentos")
+                    .getElementById("resumo")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 className="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-lg shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
@@ -73,115 +76,86 @@ export function HeroSection() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1" />
               </button>
               <button
-                onClick={() =>
-                  document
-                    .getElementById("contato")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                //onClick={() =>}
                 className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm border border-slate-600 hover:border-cyan-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-slate-700/50"
               >
-                Entre em contato
+                <Download className="w-5 h-5" />
+                Download CV
               </button>
             </div>
           </div>
 
           <div className="hidden lg:flex items-center justify-center relative">
-            <div className="relative w-80 h-80">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl blur-3xl"></div>
+            <div className="relative w-full max-w-md">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-slate-700/20 rounded-2xl blur-2xl"></div>
 
-              <div className="absolute inset-0 rounded-3xl border border-cyan-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl flex items-center justify-center overflow-hidden">
-                <svg
-                  className="w-full h-full p-8 opacity-80"
-                  viewBox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient
-                      id="grad1"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        style={{ stopColor: "#06b6d4", stopOpacity: 0.8 }}
-                      />
-                      <stop
-                        offset="100%"
-                        style={{ stopColor: "#2563eb", stopOpacity: 0.3 }}
-                      />
-                    </linearGradient>
-                  </defs>
+              <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700/40 overflow-hidden shadow-2xl">
+                <div className="flex items-center gap-2 bg-slate-900/80 px-4 py-3 border-b border-slate-700/30">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <span className="text-xs text-slate-500 ml-auto">
+                    profile.py
+                  </span>
+                </div>
 
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="80"
-                    stroke="url(#grad1)"
-                    strokeWidth="2"
-                    opacity="0.3"
-                  />
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="60"
-                    stroke="url(#grad1)"
-                    strokeWidth="2"
-                    opacity="0.5"
-                  />
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="40"
-                    stroke="url(#grad1)"
-                    strokeWidth="2"
-                    opacity="0.7"
-                  />
-
-                  <g opacity="0.6">
-                    <path
-                      d="M100 30 Q130 40 140 70"
-                      stroke="url(#grad1)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <path
-                      d="M100 170 Q130 160 140 130"
-                      stroke="url(#grad1)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <path
-                      d="M30 100 Q40 70 70 60"
-                      stroke="url(#grad1)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <path
-                      d="M170 100 Q160 130 130 140"
-                      stroke="url(#grad1)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                  </g>
-
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="20"
-                    fill="url(#grad1)"
-                    opacity="0.6"
-                  />
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="15"
-                    fill="url(#grad1)"
-                    opacity="0.4"
-                  />
-                </svg>
+                <div className="p-6 font-mono text-sm overflow-x-auto">
+                  <div className="space-y-1.5 text-slate-300">
+                    <div>
+                      <span className="text-blue-400">class</span>
+                      <span className="text-white"> Arthur:</span>
+                    </div>
+                    <div className="ml-4">
+                      <span className="text-blue-400">def</span>
+                      <span className="text-white"> </span>
+                      <span className="text-yellow-400">__init__</span>
+                      <span className="text-white">(</span>
+                      <span className="text-cyan-400">self</span>
+                      <span className="text-white">):</span>
+                    </div>
+                    <div className="ml-8">
+                      <span className="text-cyan-400">self</span>
+                      <span className="text-white">.name = </span>
+                      <span className="text-green-400">"Lucas Cabral"</span>
+                    </div>
+                    <div className="ml-8">
+                      <span className="text-cyan-400">self</span>
+                      <span className="text-white">.skills = [</span>
+                    </div>
+                    <div className="ml-12">
+                      <span className="text-green-400">"Python"</span>
+                      <span className="text-white">, </span>
+                      <span className="text-green-400">"Java"</span>
+                      <span className="text-white">, </span>
+                      <span className="text-green-400">"HTML"</span>
+                      <span className="text-white">,</span>
+                    </div>
+                    <div className="ml-12">
+                      <span className="text-green-400">"React"</span>
+                      <span className="text-white">, </span>
+                      <span className="text-green-400">"JavaScript"</span>
+                      <span className="text-white">, </span>
+                      <span className="text-green-400">"CSS"</span>
+                    </div>
+                    <div className="ml-12">
+                      <span className="text-green-400">"C"</span>
+                      <span className="text-white">, </span>
+                      <span className="text-green-400">"SQL"</span>
+                      <span className="text-white">, </span>
+                      <span className="text-green-400">"MongoDB"</span>
+                    </div>
+                    <div className="ml-8">
+                      <span className="text-white">]</span>
+                    </div>
+                    <div className="mt-3 ml-4">
+                      <span className="text-slate-500">
+                        # Sempre aprendendo...
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

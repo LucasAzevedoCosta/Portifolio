@@ -34,13 +34,6 @@ export function Sidebar({ activeSection = "inicio", onNavigate }) {
         </ul>
         {/* <ThemeSwitcher/> */}
       </nav>
-
-      <div className="px-6 pb-6">
-        <button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-semibold py-3 px-6 rounded-full shadow-lg shadow-red-500/30 transition-all duration-300 hover:shadow-red-500/50 hover:scale-105">
-          Enviar via WhatsApp
-        </button>
-      </div>
-
       <SocialLinks />
     </aside>
   );
