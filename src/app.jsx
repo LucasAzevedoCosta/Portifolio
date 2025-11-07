@@ -1,5 +1,5 @@
 import { Sidebar } from "./components/sidebar";
-import { HeroSection } from "./components/heroSection";
+import { HeroSection } from "./components/hero/heroSection";
 import { AboutSection } from "./components/aboutSection";
 import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
