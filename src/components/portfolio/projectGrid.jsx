@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "./projectCard";
 
 export function ProjectGrid({ projects, onOpenModal }) {
   const [cardImageIndices, setCardImageIndices] = useState({});

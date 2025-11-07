@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { projects } from "../../utils/lists/projects";
-import { ProjectGrid } from "./ProjectGrid";
-import { ProjectModal } from "./ProjectModal";
+import { ProjectGrid } from "./projectGrid";
+import { ProjectModal } from "./projectModal";
 
 export function PortfolioSection() {
   const [selectedProject, setSelectedProject] = useState(null);

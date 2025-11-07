@@ -1,6 +1,6 @@
 import { X, ExternalLink, Github } from "lucide-react";
 import { categoryColors } from "../../utils/lists/categoryColors";
-import { ProjectModalCarousel } from "./ProjectModalCarousel";
+import { ProjectModalCarousel } from "./projectModalCarousel";
 
 export function ProjectModal({ project, onClose }) {
   return (

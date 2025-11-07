@@ -5,9 +5,9 @@ import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
 import { ThemeProvider } from "./context/themeContext";
 import { SkillsSection } from "./components/skillsSection";
-import { CertificatesSection } from "./components/certificatesSection";
 import { ExperienceSection } from "./components/experienceSection";
 import { PortfolioSection } from "./components/portfolio/portfolioSection";
+import { CertificatesSection } from "./components/certificates/certificatesSection";
 
 function AppContent() {
   const { activeSection } = useAppContext();

@@ -1,5 +1,5 @@
 import { Github, Globe } from "lucide-react";
-import { ProjectImageCarousel } from "./ProjectImageCarousel";
+import { ProjectImageCarousel } from "./projectImageCarousel";
 import { categoryColors } from "../../utils/lists/categoryColors";
 
 export function ProjectCard({ project, currentImageIndex, onChangeImage, onClick }) {
