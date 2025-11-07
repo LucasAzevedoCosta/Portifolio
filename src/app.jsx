@@ -5,7 +5,7 @@ import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
 import { ThemeProvider } from "./context/themeContext";
 import { SkillsSection } from "./components/skillsSection";
-import { ExperienceSection } from "./components/experienceSection";
+import { ExperienceSection } from "./components/experience/experienceSection";
 import { PortfolioSection } from "./components/portfolio/portfolioSection";
 import { CertificatesSection } from "./components/certificates/certificatesSection";
 
