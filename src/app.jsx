@@ -1,6 +1,6 @@
 import { Sidebar } from "./components/sidebar";
 import { HeroSection } from "./components/hero/heroSection";
-import { AboutSection } from "./components/aboutSection";
+import { AboutSection } from "./components/about/aboutSection";
 import { AppProvider, useAppContext } from "./context/appContext";
 import { scrollToSection } from "./utils/scrollUtils";
 import { ThemeProvider } from "./context/themeContext";
@@ -19,10 +19,10 @@ function AppContent() {
         <div className="px-8">
           <HeroSection />
           <AboutSection />
-          <SkillsSection />
-          <CertificatesSection />
           <ExperienceSection />
           <PortfolioSection />
+          <SkillsSection />
+          <CertificatesSection />
         </div>
       </main>
     </div>
