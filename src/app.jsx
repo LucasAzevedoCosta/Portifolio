@@ -1,4 +1,4 @@
-import { Sidebar } from "./components/sidebar";
+import { Sidebar } from "./components/sideBar/sidebar";
 import { HeroSection } from "./components/hero/heroSection";
 import { AboutSection } from "./components/about/aboutSection";
 import { AppProvider, useAppContext } from "./context/appContext";

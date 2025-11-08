@@ -1,8 +1,6 @@
 import { NavigationItem } from "./navigationItem";
 import { SocialLinks } from "./socialLinks";
-import { UseNavigation } from "../hooks/useNavigation";
-import { User } from "lucide-react";
-import { ThemeSwitcher } from "./themeSwitcher";
+import { UseNavigation } from "../../hooks/useNavigation";
 
 export function Sidebar({ activeSection = "inicio", onNavigate }) {
   const navigationItems = UseNavigation();
