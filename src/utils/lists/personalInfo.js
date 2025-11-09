@@ -1,9 +1,9 @@
 export const personalInfo = {
-    name: 'Seu Nome',
-    title: 'Senior Java Developer',
-    birthDate: '14/09/1990',
-    location: 'São Paulo, SP',
-    email: 'seu.email@example.com',
-    github: 'github.com/seuusuario',
-    description: 'Desenvolvedor Java com mais de 5 anos de experiência em desenvolvimento de aplicações enterprise. Especializado em arquitetura de microserviços, implementação de APIs REST e otimização de performance. Paixão por código limpo e boas práticas de desenvolvimento.'
-  };
+  name: 'Lucas Azevedo Costa',
+  title: 'Desenvolvedor Back-End | Estagiário na SEEC/RN',
+  birthDate: '06/11/2005',
+  location: 'Natal, RN',
+  email: 'lucasdev.azevedo@gmail.com',
+  github: 'github.com/LucasAzevedoCosta',
+  description: 'Desenvolvedor Back-End com experiência em Java, TypeScript, Node.js e Next.js. Atualmente atuando como estagiário na Secretaria de Educação, do Esporte e do Lazer do Rio Grande do Norte (SEEC/RN), onde contribuo para o desenvolvimento e manutenção de sistemas internos, com foco em otimização de processos administrativos. Busco aprimorar minhas habilidades como desenvolvedor Full Stack, ampliando meus conhecimentos em front-end e arquitetura de software moderna.'
+};

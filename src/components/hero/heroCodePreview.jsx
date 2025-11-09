@@ -18,7 +18,7 @@ export function HeroCodePreview() {
             <div className="space-y-1.5 text-slate-300">
               <div>
                 <span className="text-blue-400">class</span>
-                <span className="text-white"> Arthur:</span>
+                <span className="text-white"> LucasAzevedo:</span>
               </div>
               <div className="ml-4">
                 <span className="text-blue-400">def</span>
@@ -31,32 +31,33 @@ export function HeroCodePreview() {
               <div className="ml-8">
                 <span className="text-cyan-400">self</span>
                 <span className="text-white">.name = </span>
-                <span className="text-green-400">"Lucas Cabral"</span>
+                <span className="text-green-400">"Lucas Azevedo Costa"</span>
               </div>
               <div className="ml-8">
                 <span className="text-cyan-400">self</span>
+                <span className="text-white">.role = </span>
+                <span className="text-green-400">"Desenvolvedor Back-End"</span>
+              </div>
+              <div className="ml-8">
                 <span className="text-white">.skills = [</span>
               </div>
               <div className="ml-12">
-                <span className="text-green-400">"Python"</span>,{" "}
                 <span className="text-green-400">"Java"</span>,{" "}
-                <span className="text-green-400">"HTML"</span>,
-              </div>
-              <div className="ml-12">
+                <span className="text-green-400">"TypeScript"</span>,{" "}
                 <span className="text-green-400">"React"</span>,{" "}
-                <span className="text-green-400">"JavaScript"</span>,{" "}
-                <span className="text-green-400">"CSS"</span>
               </div>
               <div className="ml-12">
-                <span className="text-green-400">"C"</span>,{" "}
-                <span className="text-green-400">"SQL"</span>,{" "}
-                <span className="text-green-400">"MongoDB"</span>
+                <span className="text-green-400">"PostgreSQL"</span>,{" "}
+                <span className="text-green-400">"Docker"</span>,{" "}
+                <span className="text-green-400">"API REST"</span>
               </div>
               <div className="ml-8">
                 <span className="text-white">]</span>
               </div>
               <div className="mt-3 ml-4">
-                <span className="text-slate-500"># Sempre aprendendo...</span>
+                <span className="text-slate-500">
+                  # Sempre aprendendo e evoluindo...
+                </span>
               </div>
             </div>
           </div>

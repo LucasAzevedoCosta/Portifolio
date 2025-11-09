@@ -1,4 +1,3 @@
-import { Briefcase, CheckCircle } from "lucide-react";
 import { HeroButtons } from "./heroButtons";
 import { HeroStats } from "./heroStats";
 
@@ -11,18 +10,19 @@ export function HeroContent() {
           Lucas Azevedo
         </h1>
         <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="text-slate-400">Construo experiências</span>
+          <span className="text-slate-400">Crio soluções</span>
           <br />
           <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            digitais robustas
+            eficientes e escaláveis
           </span>
         </h2>
       </div>
 
       <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-        Desenvolvedor Java especializado em criar aplicações enterprise
-        escaláveis. Com mais de 5 anos de experiência em arquitetura de
-        microserviços, APIs REST e otimização de performance.
+        Sou desenvolvedor Back-End com experiência em Java, TypeScript e Node.js.
+        Atualmente estagiando na Secretaria de Educação, do Esporte e do Lazer do Rio Grande do Norte (SEEC/RN),
+        onde aplico e aprimoro meus conhecimentos no desenvolvimento e manutenção de sistemas internos.
+        Busco evoluir como desenvolvedor Full Stack, ampliando meu domínio em React e outras tecnologias modernas.
       </p>
 
       <HeroStats />

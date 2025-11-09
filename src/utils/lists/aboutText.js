@@ -1,10 +1,11 @@
 export const aboutText = {
   title: "Sobre Mim",
-  subtitle: "Desenvolvedor back-end apaixonado por tecnologia e inovação",
+  subtitle:
+    "Desenvolvedor apaixonado por tecnologia, aprendizado contínuo e boas práticas de código.",
   trajectoryTitle: "Minha Trajetória",
   paragraphs: [
-    "Sou graduado em Análise e Desenvolvimento de Sistemas e atuo como desenvolvedor back-end com foco em Java 8+, criando e mantendo APIs REST robustas, escaláveis e seguras.",
-    "Comecei minha trajetória profissional em 2019 na área de telecomunicações, evoluindo para suporte técnico em software em 2021, e atualmente focado no desenvolvimento back-end com ampla experiência em sistemas legados.",
-    "Tenho ampla experiência em bancos de dados relacionais e domínio de frameworks essenciais para garantir performance, segurança e estabilidade em sistemas críticos.",
+    "Atualmente, atuo como estagiário na Secretaria de Educação, do Esporte e do Lazer do Rio Grande do Norte (SEEC/RN), onde aplico e aprimoro meus conhecimentos em desenvolvimento de software, com foco em back-end e integração de sistemas.",
+    "Minha experiência inclui desenvolvimento em Java, Python e Node.js, além do uso de bancos de dados como PostgreSQL e MongoDB. Estou expandindo meus conhecimentos para me tornar um desenvolvedor fullstack, aprofundando habilidades em tecnologias front-end como React.",
+    "Sou apaixonado por aprender e enfrentar novos desafios, buscando sempre as melhores práticas e soluções eficientes no desenvolvimento de software. Acredito no poder da colaboração e na troca de conhecimento como pilares para o crescimento profissional e entrega de soluções de qualidade.",
   ],
 };
