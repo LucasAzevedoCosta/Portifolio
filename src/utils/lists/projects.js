@@ -1,73 +1,33 @@
-import { FaJava } from "react-icons/fa";
-import { SiPostgresql, SiSpringboot, SiSwagger } from "react-icons/si";
-
-import vagas from "./photos/projects/vagas.jpeg";
+import { FaJava, FaNode } from "react-icons/fa";
+import { SiDocker, SiPostgresql, SiSpringboot, SiSwagger } from "react-icons/si";
 import img1 from "./photos/projects/1756992559190.jpeg";
 import img2 from "./photos/projects/1756992559299.jpeg";
 import img3 from "./photos/projects/1756992559364.jpeg";
 import img4 from "./photos/projects/1756992559438.jpeg";
 import img5 from "./photos/projects/1756992559488.jpeg";
-import captura from "./photos/projects/Captura de tela de 2025-11-03 17-04-21.png";
+import { BiLogoTypescript } from "react-icons/bi";
+import { RiNextjsFill } from "react-icons/ri";
 
 export const projects = [
   {
     id: 1,
-    title: "Sistema de Gestão Empresarial",
-    description: "Plataforma completa para gestão de processos empresariais",
-    image: vagas,
-    category: "Web Application",
-    details: {
-      info: "Sistema robusto desenvolvido para gerenciar processos empresariais com foco em escalabilidade e performance.",
-      technologies: [
-        { icon: FaJava, category: "backend" },
-        { icon: SiSpringboot, category: "backend" },
-        { icon: SiPostgresql, category: "database" },
-        { icon: SiSwagger, category: "devops" },
-      ],
-      date: "15/08/2024",
-      url: "https://www.example.com.br",
-      github: "https://github.com/seuusuario/sistema-gestao",
-      images: [vagas],
-    },
-  },
-  {
-    id: 2,
-    title: "API de Integração",
-    description: "API REST para integração entre sistemas legados",
+    title: "Gerenciamento de tarefas",
+    description: "Projeto full-stack para gerenciamento de tarefas",
     image: img1,
-    category: "Backend",
+    category: "Full-stack",
     details: {
-      info: "Solução escalável para processamento de pagamentos com alta disponibilidade e segurança.rquitetura de microserviços para processamento de pagamentosArquitetura de microserviços para processamento de pagamentosArquitetura de microserviços para processamento de pagamentosArquitetura de microserviços para processamento de pagamentos",
+      info: "Este é um projeto full-stack para gerenciamento de tarefas, composto por um backend em NestJS e um frontend em Next.js. Ele permite que os usuários criem, editem, visualizem e excluam tarefas de forma intuitiva, com autenticação segura e persistência de dados confiável, oferecendo uma solução prática e eficiente para organizar atividades diárias.",
       technologies: [
-        { icon: FaJava, category: "backend" },
-        { icon: SiSpringboot, category: "backend" },
+        { icon: BiLogoTypescript, category: "backend" },
+        { icon: FaNode, category: "backend" },
+        { icon: RiNextjsFill, category: "frontend" },
         { icon: SiPostgresql, category: "database" },
-        { icon: SiSwagger, category: "devops" },
+        { icon: SiDocker, category: "devops" },
       ],
-      date: "20/06/2024",
-      url: "https://www.example.com.br",
-      github: "https://github.com/seuusuario/sistema-gestao",
+      date: "01/09/2025",
+      //url: "https://github.com/LucasAzevedoCosta/to-do",
+      github: "https://github.com/LucasAzevedoCosta/to-do",
       images: [img1, img2, img3, img4, img5],
-    },
-  },
-  {
-    id: 3,
-    title: "Microserviços de Pagamento",
-    description: "Arquitetura de microserviços para processamento de pagamentos",
-    image: captura,
-    category: "Microservices",
-    details: {
-      info: "Solução escalável para processamento de pagamentos com alta disponibilidade e segurança.rquitetura de microserviços para processamento de pagamentosArquitetura de microserviços para processamento de pagamentosArquitetura de microserviços para processamento de pagamentosArquitetura de microserviços para processamento de pagamentos",
-      technologies: [
-        { icon: FaJava, category: "backend" },
-        { icon: SiSpringboot, category: "backend" },
-        { icon: SiPostgresql, category: "database" },
-        { icon: SiSwagger, category: "devops" },
-      ],
-      date: "10/09/2024",
-      url: "https://www.example.com.br",
-      github: "https://github.com/seuusuario/sistema-gestao",
-      images: [captura],
     },
   },
 ];
