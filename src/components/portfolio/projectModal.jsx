@@ -3,6 +3,8 @@ import { categoryColors } from "../../utils/lists/categoryColors";
 import { ProjectModalCarousel } from "./projectModalCarousel";
 
 export function ProjectModal({ project, onClose }) {
+  const { details } = project;
+
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-700 shadow-2xl">
@@ -17,7 +19,7 @@ export function ProjectModal({ project, onClose }) {
         </div>
 
         <div className="p-6 grid md:grid-cols-2 gap-8">
-          <ProjectModalCarousel images={project.details.images} />
+          <ProjectModalCarousel images={details.images} />
 
           <div className="space-y-6">
             <div>
@@ -25,7 +27,7 @@ export function ProjectModal({ project, onClose }) {
                 Informação do projeto:
               </h4>
               <p className="text-slate-300 text-sm leading-relaxed">
-                {project.details.info}
+                {details.info}
               </p>
             </div>
 
@@ -37,7 +39,7 @@ export function ProjectModal({ project, onClose }) {
                 <div>
                   <span className="text-slate-500 text-sm">Tecnologias:</span>
                   <div className="flex flex-wrap items-center space-x-4">
-                    {project.details.technologies.map((tech, i) => {
+                    {details.technologies.map((tech, i) => {
                       const { icon: Icon, category } = tech;
                       const colors =
                         categoryColors[category] || categoryColors.default;
@@ -52,38 +54,45 @@ export function ProjectModal({ project, onClose }) {
                     })}
                   </div>
                 </div>
+
                 <div>
                   <span className="text-slate-500 text-sm">Data:</span>
-                  <p className="text-slate-300 text-sm">
-                    {project.details.date}
-                  </p>
+                  <p className="text-slate-300 text-sm">{details.date}</p>
                 </div>
-                <div>
-                  <span className="text-slate-500 text-sm">URL:</span>
-                  <p className="text-cyan-400 text-sm">{project.details.url}</p>
-                </div>
+
+                {details.url && (
+                  <div>
+                    <span className="text-slate-500 text-sm">URL:</span>
+                    <p className="text-cyan-400 text-sm">{details.url}</p>
+                  </div>
+                )}
               </div>
             </div>
 
             <div>
               <h4 className="text-cyan-400 font-semibold mb-3">Share:</h4>
               <div className="flex gap-3">
-                <a
-                  href={project.details.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
-                >
-                  <ExternalLink className="w-5 h-5 text-white" />
-                </a>
-                <a
-                  href={project.details.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
-                >
-                  <Github className="w-5 h-5 text-white" />
-                </a>
+                {details.url && (
+                  <a
+                    href={details.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                  >
+                    <ExternalLink className="w-5 h-5 text-white" />
+                  </a>
+                )}
+
+                {details.github && (
+                  <a
+                    href={details.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-slate-700 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+                  >
+                    <Github className="w-5 h-5 text-white" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
