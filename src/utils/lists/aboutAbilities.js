@@ -1,24 +1,25 @@
 import { Code, Database, Shield, Users } from "lucide-react";
+import { SiReact } from "react-icons/si";
 
 export const aboutAbilities = [
   {
     icon: Code,
     title: "Desenvolvimento",
-    description: "Java 8+, Spring, Hibernate, APIs REST",
+    description: "Java, Spring, TypeScript, Node.js, APIs REST",
   },
   {
     icon: Database,
     title: "Bancos de Dados",
-    description: "SQL Server, DB2, PostgreSQL, Oracle",
+    description: "PostgreSQL, Drizzle, Hibernate",
   },
   {
-    icon: Shield,
-    title: "Segurança",
-    description: "Fortify, SonarQube, Análise de Vulnerabilidades",
+    icon: SiReact,
+    title: "Front-End",
+    description: "React, JavaScript, Next.js",
   },
   {
     icon: Users,
     title: "Metodologias",
-    description: "Scrum, Cascata, Trabalho em Equipe",
+    description: "Scrum, Trabalho em Equipe",
   },
 ];
