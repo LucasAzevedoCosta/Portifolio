@@ -1,11 +1,11 @@
 export const aboutText = {
   title: "Sobre Mim",
   subtitle:
-    "Desenvolvedor apaixonado por tecnologia, aprendizado contínuo e boas práticas de código.",
+    "Desenvolvedor full stack apaixonado por tecnologia, aprendizado contínuo e boas práticas de código.",
   trajectoryTitle: "Minha Trajetória",
   paragraphs: [
-    "Atualmente, atuo como estagiário na Secretaria de Educação, do Esporte e do Lazer do Rio Grande do Norte (SEEC/RN), onde aplico e aprimoro meus conhecimentos em desenvolvimento de software, com foco em back-end e integração de sistemas.",
-    "Minha experiência inclui desenvolvimento em Java, Python e Node.js, além do uso de bancos de dados como PostgreSQL e MongoDB. Estou expandindo meus conhecimentos para me tornar um desenvolvedor fullstack, aprofundando habilidades em tecnologias front-end como React.",
-    "Sou apaixonado por aprender e enfrentar novos desafios, buscando sempre as melhores práticas e soluções eficientes no desenvolvimento de software. Acredito no poder da colaboração e na troca de conhecimento como pilares para o crescimento profissional e entrega de soluções de qualidade.",
+    "Comecei minha jornada acadêmica em 2023, no curso de Bacharelado em Sistemas de Informação pela UNP, onde estou me aprofundando em desenvolvimento de sistemas orientados a objetos e análise de requisitos.",
+    "Tenho experiência com Java, Node.js e PostgreSQL, e atualmente estou me aprofundando em React e Java.",
+    "Sou apaixonado por aprender, buscar soluções eficientes e enfrentar novos desafios no desenvolvimento de software. Acredito que a troca de conhecimento e a colaboração são essenciais para o crescimento contínuo e para a entrega de soluções de alta qualidade.",
   ],
 };

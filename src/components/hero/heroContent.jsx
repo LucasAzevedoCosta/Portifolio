@@ -19,10 +19,11 @@ export function HeroContent() {
       </div>
 
       <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-        Sou desenvolvedor Back-End com experiência em Java, TypeScript e Node.js.
-        Atualmente estagiando na Secretaria de Educação, do Esporte e do Lazer do Rio Grande do Norte (SEEC/RN),
-        onde aplico e aprimoro meus conhecimentos no desenvolvimento e manutenção de sistemas internos.
-        Busco evoluir como desenvolvedor Full Stack, ampliando meu domínio em React e outras tecnologias modernas.
+        Sou desenvolvedor Full Stack com experiência em Java, TypeScript,
+        Node.js e Next.js. Atuo na criação e manutenção de aplicações modernas,
+        sempre buscando eficiência e boas práticas. Atualmente, estou
+        aprofundando meus conhecimentos em React e arquitetura de software para
+        entregar soluções cada vez mais completas e de alta qualidade.
       </p>
 
       <HeroStats />
