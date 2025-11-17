@@ -7,7 +7,7 @@ import { ThemeProvider } from "./context/themeContext";
 import { SkillsSection } from "./components/skills/skillsSection";
 import { ExperienceSection } from "./components/experience/experienceSection";
 import { PortfolioSection } from "./components/portfolio/portfolioSection";
-import { CertificatesSection } from "./components/certificates/certificatesSection";
+//import { CertificatesSection } from "./components/certificates/certificatesSection";
 
 function AppContent() {
   const { activeSection } = useAppContext();
@@ -22,7 +22,7 @@ function AppContent() {
           <ExperienceSection />
           <PortfolioSection />
           <SkillsSection />
-          <CertificatesSection />
+         {/*<CertificatesSection />*/}
         </div>
       </main>
     </div>

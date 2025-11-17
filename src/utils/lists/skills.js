@@ -96,7 +96,7 @@ export const skills = [
     icon: RiNextjsFill,
   },
   {
-    name: "hthml",
+    name: "html",
     category: "frontend",
     level: 45,
     experience: "2 anos",

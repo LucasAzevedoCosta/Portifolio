@@ -9,9 +9,6 @@ export function CertificateCard({ cert }) {
           alt={cert.title}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-        <div
-          className={`absolute inset-0 `}
-        ></div>
         <div className="absolute top-4 right-4 w-12 h-12 bg-slate-900/80 backdrop-blur-sm rounded-full flex items-center justify-center">
           <Award className="w-6 h-6 text-cyan-400" />
         </div>

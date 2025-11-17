@@ -1,4 +1,3 @@
-// Importação das imagens dos certificados
 import arquiteturaMVC from "./photos/certificates/ArquiteturaDeSoftwarePadrãoMVC_page-0001.jpg";
 import fundamentosJava from "./photos/certificates/FundamentosDeJava_page-0001.jpg";
 import fundamentosPython from "./photos/certificates/FundamentosDePython_page-0001.jpg";
