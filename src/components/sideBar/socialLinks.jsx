@@ -1,11 +1,11 @@
-import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 
 export function SocialLinks() {
   const socials = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: SiWhatsapp, href: 'https://wa.me/+5584991161676', label: 'WhatsApp' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/lucas-azevedo-costa-9b469734a', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/LucasAzevedoCosta', label: 'GitHub' },
   ];
 
   return (
@@ -15,6 +15,8 @@ export function SocialLinks() {
           <a
             key={social.label}
             href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={social.label}
             className="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-110"
           >
