@@ -1,10 +1,11 @@
 import { FaJava, FaNode } from "react-icons/fa";
-import { SiDocker, SiPostgresql, SiSpringboot, SiSwagger } from "react-icons/si";
+import { SiDocker, SiJavascript, SiPostgresql, SiReact, SiSpringboot, SiSwagger } from "react-icons/si";
 import img1 from "./photos/projects/1756992559190.jpeg";
 import img2 from "./photos/projects/1756992559299.jpeg";
 import img3 from "./photos/projects/1756992559364.jpeg";
 import img4 from "./photos/projects/1756992559438.jpeg";
 import img5 from "./photos/projects/1756992559488.jpeg";
+import cvonline from "./photos/projects/cvonline.png";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -28,6 +29,24 @@ export const projects = [
       //url: "https://github.com/LucasAzevedoCosta/to-do",
       github: "https://github.com/LucasAzevedoCosta/to-do",
       images: [img1, img2, img3, img4, img5],
+    },
+  },
+  {
+    id: 2,
+    title: "Currículo Online",
+    description: "Projeto Front-End de um currículo online ",
+    image: cvonline,
+    category: "Front-End",
+    details: {
+      info: "Desenvolvimento de currículo online interativo, com foco na apresentação dinâmica de informações profissionais e educacionais. O projeto foi desenvolvido utilizando JavaScript e React, aplicando os fundamentos da programação web, design responsivo e práticas de usabilidade para garantir uma experiência intuitiva para o usuário.",
+      technologies: [
+        { icon: SiJavascript, category: "frontend" },
+        { icon: SiReact, category: "frontend" },
+      ],
+      date: "19/11/2025",
+      //url: "#",
+      github: "https://github.com/LucasAzevedoCosta/Portifolio",
+      images: [cvonline],
     },
   },
 ];
