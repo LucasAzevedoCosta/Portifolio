@@ -19,12 +19,10 @@ export function ProjectModal({ project, onClose }) {
         </div>
 
         <div className="p-6 grid md:grid-cols-2 gap-8">
-          {/* Carrossel de Imagens com um tamanho maior */}
           <div className="w-full h-full rounded-lg overflow-hidden shadow-lg">
             <ProjectModalCarousel images={details.images} />
           </div>
 
-          {/* Conteúdo do projeto */}
           <div className="space-y-6">
             <div>
               <h4 className="text-cyan-400 font-semibold mb-2">
