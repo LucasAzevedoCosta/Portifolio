@@ -10,18 +10,12 @@ export const experiences = [
     location: "Natal, RN",
     type: "Estágio",
     description:
-      "Atuação no desenvolvimento e manutenção de sistemas internos do setor COINTE. Responsável por criar soluções para otimização de processos administrativos, desenvolvendo APIs e sistemas voltados para gestão e automação.",
-    technologies: [
-      FaNodeJs,
-      SiTypescript,
-      SiPostgresql,
-      SiReact,
-      SiDocker,
-    ],
+      "Atuação no desenvolvimento e manutenção de sistemas internos do setor COINTE, contribuindo para a otimização de processos administrativos. Responsável por desenvolver APIs, implementar funcionalidades em sistemas de gestão e apoiar iniciativas de automação voltadas ao aumento de eficiência operacional.",
+    technologies: [FaNodeJs, SiTypescript, SiPostgresql, SiReact, SiDocker],
     highlights: [
-      "Criação de sistemas internos para uso do setor de tecnologia",
-      "Desenvolvimento de soluções de automação em Node.js e TypeScript",
-      "Suporte técnico ao estúdio e e-mails institucionais",
+      "Desenvolvimento de sistemas internos para apoiar processos do setor de tecnologia",
+      "Implementação de soluções de automação utilizando Node.js e TypeScript",
+      "Prestação de suporte técnico ao estúdio e à infraestrutura de e-mails institucionais",
     ],
   },
 ];
