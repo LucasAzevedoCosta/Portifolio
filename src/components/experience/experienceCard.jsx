@@ -39,7 +39,7 @@ export function ExperienceCard({ exp }) {
         </span>
       </div>
 
-      <p className="text-slate-300 mb-4 leading-relaxed">{exp.description}</p>
+      <p className="text-slate-300 mb-4 leading-relaxed text-justify">{exp.description}</p>
 
       <div className="mb-4">
         <p className="text-sm text-slate-500 mb-2">Tecnologias:</p>

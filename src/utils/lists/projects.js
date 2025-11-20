@@ -44,7 +44,7 @@ export const projects = [
         { icon: SiReact, category: "frontend" },
       ],
       date: "19/11/2025",
-      //url: "#",
+      url: "https://lucasazevedo.vercel.app/",
       github: "https://github.com/LucasAzevedoCosta/Portifolio",
       images: [cvonline],
     },

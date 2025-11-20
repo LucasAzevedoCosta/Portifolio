@@ -15,7 +15,7 @@ export function ExperienceProfileCard({ personalInfo }) {
           {personalInfo.name}
         </h3>
         <p className="text-cyan-400 font-semibold mb-4">{personalInfo.title}</p>
-        <p className="text-slate-400 text-sm leading-relaxed mb-6">
+        <p className="text-slate-400 text-sm leading-relaxed mb-6 text-justify">
           {personalInfo.description}
         </p>
       </div>

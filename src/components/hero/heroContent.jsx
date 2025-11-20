@@ -18,11 +18,10 @@ export function HeroContent() {
         </h2>
       </div>
 
-      <p className="text-lg text-slate-400 leading-relaxed max-w-xl space-y-4">
+      <p className="text-lg text-slate-400 leading-relaxed max-w-xl space-y-4 text-justify">
         Sou desenvolvedor Full Stack com experiência em Java, TypeScript,
         Node.js e Next.js, atuando tanto na criação quanto na manutenção de
-        aplicações modernas. Bem como, busco continuamente promover eficiência,
-        desempenho e aderência às melhores práticas de desenvolvimento.
+        aplicações modernas.
         <br />
         <br />
         Além disso, encontro-me em processo de aprofundamento técnico em React e
