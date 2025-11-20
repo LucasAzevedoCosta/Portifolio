@@ -14,10 +14,8 @@ export function ExperienceProfileCard({ personalInfo }) {
         <h3 className="text-2xl font-bold text-white mb-2">
           {personalInfo.name}
         </h3>
-        <p className="text-cyan-400 font-semibold mb-4">
-          {personalInfo.title}
-        </p>
-        <p className="text-slate-400 text-sm leading-relaxed mb-6">
+        <p className="text-cyan-400 font-semibold mb-4">{personalInfo.title}</p>
+        <p className="text-slate-400 text-sm leading-relaxed mb-6 text-justify">
           {personalInfo.description}
         </p>
       </div>
@@ -61,10 +59,14 @@ export function ExperienceProfileCard({ personalInfo }) {
         />
       </div>
 
-      <button className="w-full mt-8 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/30">
+      <a
+        href="/Currículo-LucasAzevedo.pdf"
+        download
+        className="w-full mt-8 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/30"
+      >
         <Download className="w-5 h-5" />
-        Download CV
-      </button>
+        Baixar Currículo
+      </a>
     </div>
   );
 }
