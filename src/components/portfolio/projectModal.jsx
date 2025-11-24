@@ -28,7 +28,7 @@ export function ProjectModal({ project, onClose }) {
               <h4 className="text-cyan-400 font-semibold mb-2">
                 Informação do projeto:
               </h4>
-              <p className="text-slate-300 text-sm leading-relaxed">
+              <p className="text-slate-300 text-sm leading-relaxed text-justify">
                 {details.info}
               </p>
             </div>

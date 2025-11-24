@@ -10,20 +10,28 @@ export function HeroContent() {
           Lucas Azevedo
         </h1>
         <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="text-slate-400">Crio soluções</span>
+          <span className="text-slate-400">Desenvolvedor Full Stack</span>
           <br />
           <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            eficientes e escaláveis
+            focado em qualidade e performance
           </span>
         </h2>
       </div>
 
-      <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
+      <p className="text-lg text-slate-400 leading-relaxed max-w-xl space-y-4 text-justify">
         Sou desenvolvedor Full Stack com experiência em Java, TypeScript,
-        Node.js e Next.js. Atuo na criação e manutenção de aplicações modernas,
-        sempre buscando eficiência e boas práticas. Atualmente, estou
-        aprofundando meus conhecimentos em React e arquitetura de software para
-        entregar soluções cada vez mais completas e de alta qualidade.
+        Node.js e Next.js, atuando tanto na criação quanto na manutenção de
+        aplicações modernas.
+        <br />
+        <br />
+        Além disso, encontro-me em processo de aprofundamento técnico em React e
+        arquitetura de software, a fim de entregar soluções progressivamente
+        mais completas, robustas e de elevada qualidade.
+        <br />
+        <br />
+        Dessa forma, consigo alinhar inovação, organização e excelência em cada
+        projeto desenvolvido, mantendo assim um compromisso constante com a
+        evolução profissional.
       </p>
 
       <HeroStats />
