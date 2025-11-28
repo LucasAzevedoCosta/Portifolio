@@ -1,38 +1,89 @@
+import { useState } from "react";
 import { NavigationItem } from "./navigationItem";
 import { SocialLinks } from "./socialLinks";
 import { UseNavigation } from "../../hooks/useNavigation";
 
 export function Sidebar({ activeSection = "inicio", onNavigate }) {
+  const [isOpen, setIsOpen] = useState(false);
   const navigationItems = UseNavigation();
 
   return (
-    <aside className="w-64 h-screen fixed top-0 left-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white flex flex-col z-50">
-      <div className="flex flex-col items-center pt-12 pb-8 px-6">
-        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-slate-700 to-slate-600 border-4 border-cyan-400 shadow-lg shadow-cyan-400/30 overflow-hidden mb-4">
-          <div className="w-full h-full flex items-center justify-center">
+    <>
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 md:hidden z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden p-4 text-white fixed top-4 left-4 z-50 focus:outline-none"
+      >
+        <div className="space-y-1">
+          <span
+            className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${
+              isOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-6 h-0.5 bg-white transition-opacity duration-300 ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          ></span>
+        </div>
+      </button>
+
+      <aside
+        className={`
+          fixed top-0 left-0 h-screen bg-gradient-to-b
+          from-slate-900 via-slate-800 to-slate-900 text-white
+          flex flex-col z-50 transition-all duration-300 overflow-hidden
+          ${isOpen ? "w-64" : "w-0"} md:w-64
+        `}
+      >
+        {isOpen && (
+          <button
+            onClick={() => setIsOpen(false)}
+            className="md:hidden absolute top-4 right-4 text-white text-3xl"
+          >
+            &times;
+          </button>
+        )}
+
+        <div className="flex flex-col items-center pt-12 pb-8 px-6">
+          <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-cyan-400 shadow-lg shadow-cyan-400/30">
             <img src="https://github.com/lucasazevedocosta.png" alt="" />
           </div>
+
+          <h1 className="text-xl font-bold">Lucas Azevedo</h1>
+          <p className="text-sm text-cyan-400">Fullstack Developer</p>
         </div>
 
-        <h1 className="text-xl font-bold text-white mb-1">Lucas Azevedo</h1>
-        <p className="text-sm text-cyan-400">Fullstack Developer</p>
-      </div>
+        <nav className="flex-1 px-4 pb-6">
+          <ul className="space-y-2">
+            {navigationItems.map((item, index) => (
+              <NavigationItem
+                key={item.id}
+                {...item}
+                isActive={activeSection === item.id}
+                isFirst={index === 0}
+                onClick={() => {
+                  onNavigate?.(item.id);
+                  setIsOpen(false);
+                }}
+              />
+            ))}
+          </ul>
+        </nav>
 
-      <nav className="flex-1 px-4 pb-6">
-        <ul className="space-y-2">
-          {navigationItems.map((item, index) => (
-            <NavigationItem
-              key={item.id}
-              {...item}
-              isActive={activeSection === item.id}
-              isFirst={index === 0}
-              onClick={() => onNavigate?.(item.id)}
-            />
-          ))}
-        </ul>
-        {/* <ThemeSwitcher/> */}
-      </nav>
-      <SocialLinks />
-    </aside>
+        <SocialLinks />
+      </aside>
+    </>
   );
 }
