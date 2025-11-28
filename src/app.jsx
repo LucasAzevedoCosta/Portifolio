@@ -9,20 +9,20 @@ import { ExperienceSection } from "./components/experience/experienceSection";
 import { PortfolioSection } from "./components/portfolio/portfolioSection";
 //import { CertificatesSection } from "./components/certificates/certificatesSection";
 
-function AppContent() {
+export function AppContent() {
   const { activeSection } = useAppContext();
 
   return (
     <div className="min-h-screen bg-slate-950 flex">
       <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
-      <main className="ml-64 flex-1 overflow-y-auto scroll-smooth">
+
+      <main className="ml-0 md:ml-64 flex-1 overflow-y-auto scroll-smooth">
         <div className="px-8">
           <HeroSection />
           <AboutSection />
           <ExperienceSection />
           <PortfolioSection />
           <SkillsSection />
-         {/*<CertificatesSection />*/}
         </div>
       </main>
     </div>
