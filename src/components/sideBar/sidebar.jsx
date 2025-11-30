@@ -11,14 +11,14 @@ export function Sidebar({ activeSection = "inicio", onNavigate }) {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 lg:hidden z-40"
+          className="fixed inset-0 bg-black/50 xl:hidden z-40"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-4 text-white fixed top-4 left-4 z-50 focus:outline-none"
+        className="xl:hidden p-4 text-white fixed top-4 left-4 z-50 focus:outline-none"
       >
         <div className="space-y-1">
           <span
@@ -46,13 +46,13 @@ export function Sidebar({ activeSection = "inicio", onNavigate }) {
           flex flex-col z-50 duration-300 overflow-hidden
 
           w-64 transform ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          lg:translate-x-0 lg:w-64
+          xl:translate-x-0 xl:w-64
         `}
       >
         {isOpen && (
           <button
             onClick={() => setIsOpen(false)}
-            className="lg:hidden absolute top-4 right-4 text-white text-3xl"
+            className="xl:hidden absolute top-4 right-4 text-white text-3xl"
           >
             &times;
           </button>

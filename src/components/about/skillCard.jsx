@@ -10,7 +10,7 @@ export function SkillCard({ skill }) {
         hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105
         flex flex-col
 
-        h-48
+        h-auto
         sm:h-48
         md:h-50
         lg:h-54

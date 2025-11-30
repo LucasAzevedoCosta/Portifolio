@@ -16,7 +16,7 @@ export function AppContent() {
     <div className="min-h-screen bg-slate-950 flex">
       <Sidebar activeSection={activeSection} onNavigate={scrollToSection} />
 
-      <main className="ml-0 lg:ml-64 flex-1 overflow-y-auto scroll-smooth">
+      <main className="ml-0 xl:ml-64 flex-1 overflow-y-auto scroll-smooth">
         <div className="px-8">
           <HeroSection />
           <AboutSection />
