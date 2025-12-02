@@ -24,7 +24,11 @@ export function SkillsSection() {
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
         />
-        <SkillsGrid skills={filteredSkills} categoryColors={categoryColors} />
+        <SkillsGrid
+          skills={filteredSkills}
+          categoryColors={categoryColors}
+          activeCategory={activeCategory}
+        />
       </div>
     </section>
   );
