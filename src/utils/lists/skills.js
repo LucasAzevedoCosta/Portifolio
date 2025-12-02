@@ -12,6 +12,7 @@ import {
   SiSpringboot,
   SiSwagger,
   SiTypescript,
+  SiNestjs,
 } from "react-icons/si";
 
 export const skills = [
@@ -62,6 +63,14 @@ export const skills = [
     experience: "2 anos",
     projects: 4,
     icon: BiLogoTypescript,
+  },
+  {
+    name: "Nest.JS",
+    category: "backend",
+    level: 55,
+    experience: "2 anos",
+    projects: 3,
+    icon: SiNestjs,
   },
   {
     name: "PostgreSQL",

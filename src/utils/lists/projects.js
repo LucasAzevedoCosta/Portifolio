@@ -1,11 +1,14 @@
 import { FaJava, FaNode } from "react-icons/fa";
-import { SiDocker, SiJavascript, SiPostgresql, SiReact, SiSpringboot, SiSwagger } from "react-icons/si";
+import { SiDocker, SiJavascript, SiNestjs, SiPostgresql, SiReact } from "react-icons/si";
 import img1 from "./photos/projects/1756992559190.jpeg";
 import img2 from "./photos/projects/1756992559299.jpeg";
 import img3 from "./photos/projects/1756992559364.jpeg";
 import img4 from "./photos/projects/1756992559438.jpeg";
 import img5 from "./photos/projects/1756992559488.jpeg";
 import cvonline from "./photos/projects/cvonline.png";
+import tecImg1 from "./photos/projects/tec-img1.png";
+import tecImg2 from "./photos/projects/tec-img2.png";
+import tecImg3 from "./photos/projects/tec-img3.png";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -25,7 +28,7 @@ export const projects = [
         { icon: SiPostgresql, category: "database" },
         { icon: SiDocker, category: "devops" },
       ],
-      date: "01/09/2025",
+      date: "05/08/2025 - 01/09/2025",
       //url: "https://github.com/LucasAzevedoCosta/to-do",
       github: "https://github.com/LucasAzevedoCosta/to-do",
       images: [img1, img2, img3, img4, img5],
@@ -43,10 +46,32 @@ export const projects = [
         { icon: SiJavascript, category: "frontend" },
         { icon: SiReact, category: "frontend" },
       ],
-      date: "19/11/2025",
+      date: "01/11/2025 - Presente",
       url: "https://lucasazevedo.vercel.app/",
       github: "https://github.com/LucasAzevedoCosta/Portifolio",
       images: [cvonline],
+    },
+  },
+  {
+    id: 3,
+    title: "Plataforma Digital Campanha NATE 2025",
+    description: "Sistema full-stack para inscrição e avaliação de projetos da Campanha NATE.",
+    image: tecImg1,
+    category: "Full-stack",
+    details: {
+      info: "Plataforma desenvolvida para gerenciar a 'Campanha NATE 2025: Tecnologia que Transforma'. O backend em NestJS/TypeScript e PostgreSQL é responsável por receber, armazenar e gerenciar a submissão dos projetos (relatos, vídeos e imagens), além de fornecer uma área de administração para a COINTE realizar a avaliação conforme os critérios definidos. O frontend em React/JavaScript oferece a interface para a participação dos professores e a visualização na 'Galeria Virtual'.",
+      technologies: [
+        { icon: BiLogoTypescript, category: "backend" },
+        { icon: FaNode, category: "backend" },
+        { icon: SiNestjs, category: "backend" },
+        { icon: SiReact, category: "frontend" },
+        { icon: SiJavascript, category: "frontend" },
+        { icon: SiPostgresql, category: "database" },
+      ],
+      date: "10/08/2025 - 13/09/2025",
+      url: "https://tectransforma.educacao.rn.gov.br/", 
+      //github: "",
+      images: [tecImg1, tecImg2, tecImg3],
     },
   },
 ];

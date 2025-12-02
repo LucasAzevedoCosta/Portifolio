@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Mail, Github, Download } from "lucide-react";
+import { Calendar, MapPin, Mail, Download, Linkedin } from "lucide-react";
 
 export function ExperienceProfileCard({ personalInfo }) {
   return (
@@ -44,16 +44,16 @@ export function ExperienceProfileCard({ personalInfo }) {
           }
         />
         <ProfileInfo
-          icon={<Github className="w-5 h-5 text-cyan-400" />}
-          label="GitHub"
+          icon={<Linkedin className="w-5 h-5 text-cyan-400" />}
+          label="LinkedIn"
           value={
             <a
-              href={`https://${personalInfo.github}`}
+              href={`https://${personalInfo.linkedIn}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-300 font-medium text-sm truncate hover:text-cyan-400 transition-colors"
             >
-              {personalInfo.github}
+              {personalInfo.linkedIn}
             </a>
           }
         />

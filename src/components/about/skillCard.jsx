@@ -10,7 +10,7 @@ export function SkillCard({ skill }) {
         hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105
         flex flex-col
 
-        h-48        /* mobile */
+        h-auto
         sm:h-48
         md:h-50
         lg:h-54
@@ -22,7 +22,7 @@ export function SkillCard({ skill }) {
 
       <h4 className="text-white font-bold mb-2">{skill.title}</h4>
 
-      <p className="text-slate-400 text-sm flex-grow">
+      <p className="text-slate-400 text-sm break-words leading-relaxed">
         {skill.description}
       </p>
     </div>

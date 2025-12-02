@@ -6,8 +6,8 @@ export function ProjectModal({ project, onClose }) {
   const { details } = project;
 
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden border border-slate-700 shadow-2xl">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-start md:items-center justify-center p-4 overflow-y-auto">
+      <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl w-full max-w-5xl max-h-none md:max-h-[90vh] overflow-hidden border border-slate-700 shadow-2xl">
         <div className="sticky top-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 p-4 flex justify-between items-center z-10">
           <h3 className="text-2xl font-bold text-white">{project.title}</h3>
           <button
@@ -18,7 +18,7 @@ export function ProjectModal({ project, onClose }) {
           </button>
         </div>
 
-        <div className="p-6 grid md:grid-cols-2 gap-8">
+        <div className="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 overflow-y-auto">
           <div className="w-full h-full rounded-lg overflow-hidden shadow-lg">
             <ProjectModalCarousel images={details.images} />
           </div>
@@ -37,14 +37,16 @@ export function ProjectModal({ project, onClose }) {
               <h4 className="text-cyan-400 font-semibold mb-2">
                 Detalhes do projeto:
               </h4>
-              <div className="space-y-2">
+
+              <div className="space-y-3">
                 <div>
                   <span className="text-slate-500 text-sm">Tecnologias:</span>
-                  <div className="flex flex-wrap items-center space-x-4">
+                  <div className="flex flex-wrap gap-3 mt-1">
                     {details.technologies.map((tech, i) => {
                       const { icon: Icon, category } = tech;
                       const colors =
                         categoryColors[category] || categoryColors.default;
+
                       return (
                         <div
                           key={i}
@@ -65,7 +67,14 @@ export function ProjectModal({ project, onClose }) {
                 {details.url && (
                   <div>
                     <span className="text-slate-500 text-sm">URL:</span>
-                    <p className="text-cyan-400 text-sm">{details.url}</p>
+                    <a
+                      href={details.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyan-400 text-sm underline break-all"
+                    >
+                      {details.url}
+                    </a>
                   </div>
                 )}
               </div>
