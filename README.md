@@ -111,4 +111,4 @@ A Vercel é inteligente e geralmente detecta automaticamente as configurações 
 
 ## Licença 📄
 
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo `LICENSE` (se existir) na raiz do repositório.
+Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo `LICENSE` na raiz do repositório.
