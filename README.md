@@ -14,7 +14,7 @@ O portfólio foi construído com um stack moderno e eficiente:
 | :--- | :--- | :--- |
 | **Framework/Biblioteca** | **React** | Biblioteca JavaScript para a construção da interface de usuário. |
 | **Build Tool** | **Vite** | Ferramenta de construção rápida para desenvolvimento frontend. |
-| **Linguagem** | **TypeScript** | Superconjunto do JavaScript que adiciona tipagem estática, melhorando a robustez do código. |
+| **Linguagem** | **JavaScript** | Utilizando a linguagem para garantir um código flexível e de fácil manutenção. |
 | **Estilização** | **Tailwind CSS** | Framework CSS utilitário para estilização rápida e responsiva. |
 | **Ícones** | **Lucide React** & **React Icons** | Coleções de ícones para aprimorar a interface. |
 
