@@ -5,7 +5,7 @@ export const experiences = [
   {
     position: "Estagiário em Desenvolvimento de Software",
     company: "Secretaria de Educação, Esporte e Lazer (SEEC/RN)",
-    period: "Out/2024 - Presente",
+    period: "Ago/2024 - Presente",
     duration: "Atual",
     location: "Natal, RN",
     type: "Estágio",
