@@ -5,7 +5,7 @@ export const aboutAbilities = [
   {
     icon: Code,
     title: "Desenvolvimento",
-    description: "Java, Spring, TypeScript, Node.js, APIs REST",
+    description: "PHP, Laravel, TypeScript, Node.js, Nest.js, APIs REST",
   },
   {
     icon: Database,
@@ -15,7 +15,7 @@ export const aboutAbilities = [
   {
     icon: SiReact,
     title: "Front-End",
-    description: "React, JavaScript, Next.js",
+    description: "React, Vue.js, JavaScript, Next.js",
   },
   {
     icon: Users,

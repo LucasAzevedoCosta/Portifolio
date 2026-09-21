@@ -1,5 +1,5 @@
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaJava, FaNode } from "react-icons/fa";
+import { FaJava, FaLaravel, FaNode, FaPhp, FaVuejs } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
 import {
@@ -11,11 +11,26 @@ import {
   SiJavascript,
   SiSpringboot,
   SiSwagger,
-  SiTypescript,
   SiNestjs,
 } from "react-icons/si";
 
 export const skills = [
+  {
+    name: "PHP",
+    category: "backend",
+    level: 50,
+    experience: "1 ano",
+    projects: 2,
+    icon: FaPhp,
+  },
+  {
+    name: "Laravel",
+    category: "backend",
+    level: 50,
+    experience: "1 ano",
+    projects: 2,
+    icon: FaLaravel,
+  },
   {
     name: "Java",
     category: "backend",
@@ -95,6 +110,14 @@ export const skills = [
     experience: "2 anos",
     projects: 10,
     icon: SiGit,
+  },
+  {
+    name: "Vue.js",
+    category: "frontend",
+    level: 45,
+    experience: "1 ano",
+    projects: 2,
+    icon: FaVuejs,
   },
   {
     name: "Next.js",

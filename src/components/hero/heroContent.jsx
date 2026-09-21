@@ -19,14 +19,14 @@ export function HeroContent() {
       </div>
 
       <p className="text-lg text-slate-400 leading-relaxed max-w-xl space-y-4 text-justify">
-        Sou desenvolvedor Full Stack com experiência em Java, TypeScript,
-        Node.js e Next.js, atuando tanto na criação quanto na manutenção de
-        aplicações modernas.
+        Sou desenvolvedor Full Stack com experiência em PHP/Laravel, TypeScript,
+        Node.js/Nest.js, Vue.js e React, atuando tanto na criação quanto na
+        manutenção de aplicações modernas.
         <br />
         <br />
-        Além disso, encontro-me em processo de aprofundamento técnico em React e
-        arquitetura de software, a fim de entregar soluções progressivamente
-        mais completas, robustas e de elevada qualidade.
+        Atualmente trabalho na Telepesquisa, desenvolvendo sistemas internos,
+        automação de atendimento com IA e integrações de ponta a ponta em uma
+        equipe enxuta.
         <br />
         <br />
         Dessa forma, consigo alinhar inovação, organização e excelência em cada
