@@ -60,7 +60,7 @@ export function ExperienceProfileCard({ personalInfo }) {
       </div>
 
       <a
-        href="/Currículo-LucasAzevedo.pdf"
+        href="/Lucas Azevedo Costa - Currículo.pdf"
         download
         className="w-full mt-8 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/30"
       >

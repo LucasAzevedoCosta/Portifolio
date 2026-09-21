@@ -16,7 +16,7 @@ export function HeroButtons() {
       </button>
 
       <a
-        href="/Currículo-LucasAzevedo.pdf"
+        href="/Lucas Azevedo Costa - Currículo.pdf"
         download
         className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm border border-slate-600 hover:border-cyan-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-slate-700/50"
       >

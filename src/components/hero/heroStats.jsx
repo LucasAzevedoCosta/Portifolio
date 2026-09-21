@@ -6,8 +6,8 @@ export function HeroStats() {
       <div className="flex items-center gap-2">
         <Briefcase className="w-5 h-5 text-cyan-400" />
         <span className="text-slate-300">
-          <span className="font-semibold text-white">Junior Developer</span>
-          <span className="text-slate-500"> • 1 ano</span>
+          <span className="font-semibold text-white">Full Stack Developer</span>
+          <span className="text-slate-500"> • 2 anos</span>
         </span>
       </div>
       <div className="flex items-center gap-2">
